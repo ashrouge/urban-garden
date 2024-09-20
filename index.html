@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Urban Hydroponics</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/fontawesome-free-6.5.2-web/css/all.css">
+</head>
+
+<body>
+  <header>
+    <!-- Mobile Hamburger Icon -->
+    <div class="hamburger" onclick="toggleSidebar()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="logo">
+      <h1>Urban Hydroponics</h1>
+    </div>
+    <div class="navbar">
+      <ul class="nav">
+        <li class="nav-items"><a href="#home" onclick="activeButton(event)">Home</a></li>
+        <li class="nav-items"><a href="#about" onclick="activeButton(event)">About Us</a></li>
+        <li class="nav-items"><a href="#services" onclick="activeButton(event)">Services</a></li>
+        <li class="nav-items"><a href="#products" onclick="activeButton(event)">Products</a></li>
+        <li class="nav-items"><a href="#contact" onclick="activeButton(event)">Contact</a></li>
+      </ul>
+    </div>
+
+
+    <!-- Sidebar for Mobile -->
+    <div id="sidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Sustainable Farming in Urban Areas</h2>
+      <p>Grow fresh vegetables and herbs right in your city. Join the future of farming with our hydroponic systems.</p>
+      <a href="#services" class="cta-button">Learn More</a>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <h2>About Urban Hydroponics</h2>
+    <p>We provide innovative solutions for urban farming using hydroponic and vertical farming techniques. Our mission
+      is to make fresh, local produce available to everyone, reducing the environmental impact of traditional farming
+      methods.</p>
+  </section>
+
+  <section id="services" class="services-section">
+    <h2>Our Services</h2>
+    <div class="service">
+      <h3>Hydroponic System Installation</h3>
+      <p>Custom installation of hydroponic systems tailored to your space, whether it's your home, office, or community
+        garden.</p>
+    </div>
+    <div class="service">
+      <h3>Workshops & Training</h3>
+      <p>Learn how to grow your own food with our hands-on workshops and expert-led training programs.</p>
+    </div>
+    <div class="service">
+      <h3>Consultation & Maintenance</h3>
+      <p>We offer ongoing support and maintenance for your urban farm to ensure it thrives year-round.</p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="products-section">
+    <h2>Our Products</h2>
+    <div class="product-container">
+      <div class="product">
+        <h3>Basic Hydroponic Kit</h3>
+        <p>Perfect for beginners who want to start growing at home.</p>
+        <button
+          onclick="viewDetails('Basic Hydroponic Kit', 'This kit includes everything you need to start a small hydroponic system at home, including nutrients and seedlings.')">View
+          Details</button>
+      </div>
+      <div class="product">
+        <h3>Vertical Garden Setup</h3>
+        <p>Save space with this vertical farming solution.</p>
+        <button
+          onclick="viewDetails('Vertical Garden Setup', 'This setup is ideal for urban homes with limited space, allowing you to grow vertically and maximize yield.')">View
+          Details</button>
+      </div>
+      <div class="product">
+        <h3>Hydroponic Nutrient Pack</h3>
+        <p>A complete set of nutrients for hydroponic plants.</p>
+        <button
+          onclick="viewDetails('Hydroponic Nutrient Pack', 'This nutrient pack includes essential minerals for healthy plant growth, suitable for all hydroponic systems.')">View
+          Details</button>
+      </div>
+    </div>
+
+    <!-- Modal for product details -->
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h3 id="modal-product-title"></h3>
+        <p id="modal-product-description"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Urban Hydroponics. All rights reserved.</p>
+      <p>Contact us: info@urbanhydroponics.com | Phone: 123-456-7890</p>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+
+</html>
